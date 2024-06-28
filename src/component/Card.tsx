@@ -10,7 +10,7 @@ const Card: React.FC<CardProps> = ({ country, handleSelectCountry }) => {
     <div
       className="w-82 h-52 border-2 border-black p-4 m-8 cursor-pointer"
       onClick={() => {
-        handleSelectCountry;
+        handleSelectCountry(country);
       }}
     >
       <img src={country.flags.png} className="mx-auto w-40 h-24" />

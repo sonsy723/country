@@ -16,6 +16,7 @@ const CountryList: React.FC = () => {
   }, []);
 
   const handleSelectCountry = (country: Country): void => {
+    console.log(country);
     if (
       !selectedCountries.find(
         (selectedCountry: Country) =>
@@ -35,13 +36,9 @@ const CountryList: React.FC = () => {
   console.log(selectedCountries);
   return (
     <div className="m-auto mt-5">
-      <div
-        onClick={() => {
-          handleSelectCountry;
-        }}
-      >
+      <div>
         <h2 className="text-3xl py-5 text-center">Favorite Countries</h2>
-        <div className="grid grid-rows-4 grid-cols-4 m-auto">
+        <div className="grid grid-cols-4 m-auto">
           {selectedCountries.map((country: Country) => {
             return (
               <Card
@@ -53,11 +50,7 @@ const CountryList: React.FC = () => {
           })}
         </div>
       </div>
-      <div
-        onClick={() => {
-          handleSelectCountry;
-        }}
-      >
+      <div>
         <h2 className="text-3xl py-5 text-center">Countries</h2>
         <div className="grid grid-rows-4 grid-cols-4 m-auto">
           {countries.map((country: Country) => {
