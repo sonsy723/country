@@ -5,7 +5,7 @@ import { Country } from "../types/country";
 
 const CountryList: React.FC = () => {
   const [countries, setCountries] = useState<Country[]>([]);
-  const [selectedCountries, setSelectedCountries] = useState([]);
+  const [selectedCountries, setSelectedCountries] = useState<Country[]>([]);
 
   useEffect(() => {
     const fetchData = async function () {
